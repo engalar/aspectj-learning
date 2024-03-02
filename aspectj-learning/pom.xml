@@ -37,7 +37,7 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
-            <version>1.8.13</version>
+            <version>1.9.7</version>
         </dependency>
 
         <dependency>
@@ -100,7 +100,7 @@
 
 
             <!--编译期织入-->
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
                 <version>1.14.0</version>
@@ -121,30 +121,30 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
 
             <!--编译后织入-->
-            <!--<plugin>-->
-            <!--<groupId>org.codehaus.mojo</groupId>-->
-            <!--<artifactId>aspectj-maven-plugin</artifactId>-->
-            <!--<version>1.11</version>-->
-            <!--<configuration>-->
-            <!--<complianceLevel>1.8</complianceLevel>-->
-            <!--<weaveDependencies>-->
-            <!--<weaveDependency>-->
-            <!--<groupId>com.javadoop</groupId>-->
-            <!--<artifactId>aspectj-learning-share</artifactId>-->
-            <!--</weaveDependency>-->
-            <!--</weaveDependencies>-->
-            <!--</configuration>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<goals>-->
-            <!--<goal>compile</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>aspectj-maven-plugin</artifactId>
+                <version>1.14.0</version>
+                <configuration>
+                    <complianceLevel>1.8</complianceLevel>
+                    <weaveDependencies>
+                        <weaveDependency>
+                            <groupId>com.javadoop</groupId>
+                            <artifactId>aspectj-learning-share</artifactId>
+                        </weaveDependency>
+                    </weaveDependencies>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
             <!--Load-Time织入，使用 mvn test 跑测试的时候可以看到效果(请将 LoadTimeTest 中的 @Test 注释放开)-->
             <!--适合开发阶段测试使用-->

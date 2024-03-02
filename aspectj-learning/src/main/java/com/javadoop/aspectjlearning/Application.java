@@ -15,9 +15,9 @@ public class Application {
      */
     public static void main(String[] args) {
 
-        testCompileTime();
-//        testPostCompile();
-//        testLoadTime();
+        // testCompileTime();
+        testPostCompile();
+        // testLoadTime();
         
     }
 
